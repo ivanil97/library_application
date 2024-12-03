@@ -34,7 +34,7 @@ def menu(user_library: Library) -> Optional[int]:
                     if not title_input or not author_input or not year_input:
                         raise ValueError('Для добавления книги укажите все необходимые параметры\n')
                     if not year_check(year_input):
-                        raise ValueError('Год должен быть в формате YYYY\n')
+                        raise ValueError('Год должен быть в формате YYYY и не превышать текущий год\n')
 
                     title, author, year = title_input, author_input, year_input
                     result = user_library.add_book(title, author, year)

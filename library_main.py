@@ -17,6 +17,8 @@ if __name__ == '__main__':
                 print('Введите целое число от 1 до 2')
             elif start_option == 1:
                 library_name = input('Введите название новой библиотеки: ').strip()
+                if not library_name:
+                    library_name = 'new_library'
                 library_name += '.json'
                 new_library = Library()
                 break
